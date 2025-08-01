@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🐾 Cat vs Dog Image Predictor 🐾</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <div class="emoji">🐶</div>
+  <div class="emoji">🐱</div>
+  <div class="emoji">🐶</div>
+<main>
+  <h1>🐾Cat vs Dog Image Predictor</h1>
+  <h3>Upload an Image & we'll predict it  who's is in the frame!</h3>
+
+  <form method="POST" enctype="multipart/form-data" onsubmit="startLoading()">
+    <div id="loadingBar"><div id="loadingProgress"></div></div>
+    <input type="file" name="file" required><br>
+    <button type="submit">🔍 Predict </button>
+    <div id="spinner"><div class="loader"></div></div>
+  </form>
+
+  {% if prediction %}
+    <div class="result">
+      <h2>Prediction: {{ prediction }}</h2>
+      <img src="{{ image_path }}" alt="Uploaded Image">
+    </div>
+  {% endif %}
+</main>
+  <footer>
+      Designed & Developed by <span>Vivek Joshi</span>
+  </footer>
+
+  
+</body>
+</html>
