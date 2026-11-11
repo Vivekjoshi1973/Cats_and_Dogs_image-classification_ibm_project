@@ -86,6 +86,20 @@ Open **http://localhost:5000** in your browser, upload an image, and click **Pre
 | gunicorn | Production WSGI server         |
 
 ---
+Model Performance
+Training Results
+Epoch	Training Accuracy	Training Loss	Validation Accuracy	Validation Loss
+1	61.80%	0.6460	77.32%	0.4867
+2	76.18%	0.4951	80.07%	0.4286
+3	81.97%	0.4004	81.38%	0.4061
+4	85.02%	0.3395	83.71%	0.3722
+5	88.18%	0.2744	83.56%	0.4090
+Final Performance
+Training Accuracy: 88.18%
+Validation Accuracy: 83.56%
+Training Loss: 0.2744
+Validation Loss: 0.4090
+The CNN model demonstrates effective learning on the Cats vs Dogs dataset with a validation accuracy of approximately 83.6% after 5 epochs. The model consists of three convolutional blocks followed by fully connected layers with dropout regularization to reduce overfitting.
 
 ## 📖 Dataset
 
